@@ -1,0 +1,166 @@
+/* Reset básico */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    line-height: 1.6;
+    padding: 20px;
+}
+  
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #17171A;
+    width: 100%;
+    padding: 64px 0px;
+    gap: 48px;
+    border-bottom: 2px solid #333;
+    opacity: 1;
+}
+  
+header h1 {
+    font-size: 40px;
+    color: #ff6a3d;
+    font-family: 'Space Grotesk';
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 51.04px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin-bottom: 20px;
+
+}
+  
+header h1 span {
+    color: #fff;
+}
+  
+header input {
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    max-width: 1200px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1e1e1e;
+    color: #fff;
+}
+  
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+  
+.card {
+    background-color: #1e1e1e;
+    padding: 40px;
+    gap: 20px;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    opacity: 1;
+    position: relative;
+}
+  
+.card.destaque {
+    border: 1px solid #ff6a3d;
+}
+  
+/* Header dentro da seção */
+.headerSec {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    opacity: 0px;
+   
+
+}
+  
+.card .date {
+    color: #ff6a3d;
+    min-width: 150px;
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+}
+  
+.card h2 {
+    margin: 10px 0;
+    font-family: Space Grotesk;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 30.62px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+}
+  
+.card p {
+    font-size: 20px;
+    color: #AFABB6;
+}
+  
+/* Estilo do botão de "favoritar" */
+.like {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.like input {
+    display: none;
+}
+
+.like span {
+    width: 28px;
+    height: 24px;
+    display: inline-block;
+    background-image: url('img/naoFavorito.png'); 
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* Estado "favoritado" */
+.like input:checked + span {
+    background-image: url('img/favoritado.png'); 
+}
+
+
+
+@media (max-width: 768px) {
+    header input {
+        width: 90%;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .card h2 {
+        font-size: 1.3rem;
+    }
+
+    .card p {
+        font-size: 0.9rem;
+    }
+}
